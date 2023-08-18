@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230818 16:10:08.475" rpa="false" schemaversion="4">
+<suite id="s1" name="TestSitePractice" source="c:\Users\penie\OneDrive - Spread Tecnologia\Nova pasta\Estudos spreads\RobotFramework\Robot framework avançado\Web Testing avançado\SuiteSiteTestePracticePO_antes_de_refatorar\tests\TestSitePractice.robot">
+<test id="s1-t1" name="Caso de Teste com PO 01: Remover Produtos do Carrinho" line="9">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230818 16:10:09.125" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20230818 16:10:10.994" level="WARN">The chromedriver version (115.0.5790.170) detected in PATH at C:\Users\penie\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (116.0.5845.97); currently, chromedriver 116.0.5845.96 is recommended for chrome 116.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230818 16:10:09.124" endtime="20230818 16:10:12.546"/>
+</kw>
+<status status="PASS" starttime="20230818 16:10:09.123" endtime="20230818 16:10:12.547"/>
+</kw>
+<kw name="Acessar a página home do site" library="Home">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230818 16:10:12.551" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20230818 16:10:12.550" endtime="20230818 16:10:13.799"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME_TOPMENU}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230818 16:10:19.018" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230818 16:10:19.019" level="FAIL">Element 'xpath=//*[@id="block_top_menu"]/ul' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230818 16:10:13.800" endtime="20230818 16:10:19.104"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20230818 16:10:19.105" endtime="20230818 16:10:19.106"/>
+</kw>
+<status status="FAIL" starttime="20230818 16:10:12.548" endtime="20230818 16:10:19.106"/>
+</kw>
+<kw name="Adicionar o produto &quot;t-shirt&quot; no carrinho" library="Home" sourcename="Adicionar o produto &quot;${PRODUTO}&quot; no carrinho">
+<status status="NOT RUN" starttime="20230818 16:10:19.107" endtime="20230818 16:10:19.107"/>
+</kw>
+<kw name="Excluir o produto do carrinho" library="Carrinho">
+<status status="NOT RUN" starttime="20230818 16:10:19.108" endtime="20230818 16:10:19.109"/>
+</kw>
+<kw name="Conferir se o carrinho fica vazio" library="Carrinho">
+<status status="NOT RUN" starttime="20230818 16:10:19.110" endtime="20230818 16:10:19.110"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230818 16:10:19.112" endtime="20230818 16:10:21.342"/>
+</kw>
+<status status="PASS" starttime="20230818 16:10:19.111" endtime="20230818 16:10:21.342"/>
+</kw>
+<status status="FAIL" starttime="20230818 16:10:09.102" endtime="20230818 16:10:21.343">Element 'xpath=//*[@id="block_top_menu"]/ul' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20230818 16:10:08.489" endtime="20230818 16:10:21.346"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestSitePractice">TestSitePractice</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230818 16:10:10.994" level="WARN">The chromedriver version (115.0.5790.170) detected in PATH at C:\Users\penie\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (116.0.5845.97); currently, chromedriver 116.0.5845.96 is recommended for chrome 116.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
